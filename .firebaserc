@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "studio-9286294657-f96d8"
+  },
+  "targets": {
+    "studio-9286294657-f96d8": {
+      "hosting": {
+        "deepreport-site": [
+          "deepreport-landing"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
