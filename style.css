@@ -681,6 +681,108 @@ section {
     background: linear-gradient(to bottom, transparent, rgba(28, 37, 65, 0.3));
 }
 
+/* ROI Comparison Table */
+.roi-table-wrap {
+    margin-top: 64px;
+    padding: 32px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+}
+
+.roi-table-title {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: var(--text-main);
+}
+
+.roi-table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.roi-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.85rem;
+    table-layout: fixed;
+}
+
+.roi-table thead th {
+    background: rgba(72, 229, 194, 0.08);
+    color: var(--primary-cyan);
+    font-weight: 600;
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--glass-border);
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.roi-table thead th:first-child {
+    border-radius: 10px 0 0 0;
+}
+
+.roi-table thead th:last-child {
+    border-radius: 0 10px 0 0;
+}
+
+.roi-table tbody td {
+    padding: 12px 14px;
+    color: var(--text-main);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.roi-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.roi-table tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+
+.roi-table tbody tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+
+.roi-table tbody td:first-child {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.roi-table tbody tr:hover {
+    background: rgba(72, 229, 194, 0.04);
+}
+
+.roi-impact {
+    color: var(--accent-gold) !important;
+    font-weight: 700 !important;
+}
+
+@media (max-width: 768px) {
+    .roi-table-wrap {
+        padding: 16px;
+        margin-top: 40px;
+    }
+
+    .roi-table-title {
+        font-size: 1.1rem;
+    }
+
+    .roi-table {
+        font-size: 0.8rem;
+    }
+
+    .roi-table thead th,
+    .roi-table tbody td {
+        padding: 10px 12px;
+    }
+}
+
 .accordion-list {
     max-width: 800px;
     margin: 0 auto;
@@ -898,6 +1000,107 @@ input:focus {
     color: #FFFFFF;
     border-top-right-radius: 4px;
     font-weight: 500;
+}
+
+/* Benefits Section */
+.benefits {
+    background: linear-gradient(to bottom, transparent, rgba(72, 229, 194, 0.05), transparent);
+    position: relative;
+}
+
+.benefits .section-header {
+    margin-bottom: 80px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.benefit-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 48px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(72, 229, 194, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    background: rgba(28, 37, 65, 0.6);
+}
+
+.benefit-icon-wrap {
+    width: 64px;
+    height: 64px;
+    background: rgba(72, 229, 194, 0.1);
+    color: var(--primary-cyan);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(72, 229, 194, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon-wrap.accent {
+    background: rgba(249, 200, 14, 0.1);
+    color: var(--accent-gold);
+    border-color: rgba(249, 200, 14, 0.2);
+}
+
+.benefit-card h3 {
+    font-size: 1.75rem;
+    color: white;
+    font-weight: 700;
+}
+
+.benefit-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.benefit-list li {
+    position: relative;
+    padding-left: 28px;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.benefit-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-cyan);
+    font-weight: bold;
+}
+
+.benefit-list li strong {
+    color: var(--text-main);
+}
+
+/* Updated Responsive for Benefits */
+@media (max-width: 900px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-card-wide {
+        grid-column: span 1;
+    }
+
+    .benefit-card {
+        padding: 32px;
+    }
 }
 
 /* Pricing Section Styles merged and fixed */
