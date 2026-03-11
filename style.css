@@ -588,16 +588,23 @@ section {
 
 .floating-badge {
     position: absolute;
-    bottom: -20px;
-    right: -20px;
-    background: var(--bg-card);
+    bottom: 20px;
+    right: 20px;
+    background: rgba(14, 20, 40, 0.95);
+    backdrop-filter: blur(10px);
     border: 1px solid var(--primary-cyan);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(72, 229, 194, 0.2) inset;
-    padding: 16px 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 12px 18px;
     border-radius: 12px;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 0.85rem;
     color: white;
-    animation: floating 4s ease-in-out infinite reverse;
+    max-width: 240px;
+    line-height: 1.6;
+    text-align: center;
+    z-index: 10;
+    animation: floating 4s ease-in-out infinite;
+    letter-spacing: 2px;
 }
 
 /* ROI Section */
