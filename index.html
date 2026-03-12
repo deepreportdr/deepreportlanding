@@ -44,7 +44,7 @@
             </p>
             <div class="hero-actions">
                 <a href="#solution" class="btn btn-primary" data-i18n="hero_cta_solution">Descubre ComoMePreparo</a>
-                <a href="#pricing" class="btn btn-secondary" data-i18n="hero_cta_roi">Ver Retorno de Inversión</a>
+                <a href="#solutions" class="btn btn-secondary" data-i18n="hero_cta_roi">Ver Soluciones</a>
             </div>
         </div>
         <div class="hero-visual">
@@ -290,15 +290,13 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="pricing" id="pricing">
+    <!-- Solutions Section -->
+    <section class="pricing" id="solutions">
         <div class="container">
             <div class="section-header center">
-                <div class="bubble" data-i18n="pricing_bubble">Retorno inmediato de inversión (ROI)</div>
-                <h2 class="section-title" data-i18n="pricing_title">Planes para cada fase de su clínica</h2>
-                <p class="section-desc" data-i18n="pricing_desc">Con evitar la cancelación de <strong>tan solo una
-                        prueba al mes</strong>, la
-                    herramienta ya se paga sola.</p>
+                <div class="bubble" data-i18n="pricing_bubble">Configuraciones adaptadas</div>
+                <h2 class="section-title" data-i18n="pricing_title">Soluciones para cada fase de su clínica</h2>
+                <p class="section-desc" data-i18n="pricing_desc">Optimice la comunicación con sus pacientes y elimine las barreras de idioma.</p>
             </div>
 
             <div class="pricing-grid">
@@ -308,13 +306,8 @@
                         <h3 class="tier-name">🥉 Essential</h3>
                         <p class="tier-desc" data-i18n="p1_desc">Ideal para clínicas pequeñas o consultas individuales.
                         </p>
-                        <div class="tier-price">69€<span
-                                style="font-size: 1rem; color: var(--text-muted); font-weight: normal;"
-                                data-i18n="tax_suffix"> + IVA</span><span class="tier-period" data-i18n="period_mo"> /
-                                mes</span></div>
-                        <div class="tier-yearly"><span data-i18n="or">o</span> 700€<span data-i18n="tax_suffix"> +
-                                IVA</span> / <span data-i18n="year">año</span>
-                        </div>
+                        <div class="tier-price" data-i18n="consult_price">Consultar</div>
+                        <div class="tier-yearly" data-i18n="custom_price">Precio personalizado</div>
                     </div>
                     <ul class="pricing-features">
                         <li><span class="check-icon">✓</span> <span data-i18n="p1_f1"><strong>Enlace Directo:</strong>
@@ -348,12 +341,8 @@
                         <h3 class="tier-name">🥈 Pro</h3>
                         <p class="tier-desc" data-i18n="p2_desc">La solución completa para clínicas y medianos centros.
                         </p>
-                        <div class="tier-price">149€<span
-                                style="font-size: 1rem; color: var(--text-muted); font-weight: normal;"
-                                data-i18n="tax_suffix"> + IVA</span><span class="tier-period" data-i18n="period_mo"> /
-                                mes</span></div>
-                        <div class="tier-yearly"><span data-i18n="or">o</span> 1.490€<span data-i18n="tax_suffix"> +
-                                IVA</span> / <span data-i18n="year">año</span></div>
+                        <div class="tier-price" data-i18n="consult_price">Consultar</div>
+                        <div class="tier-yearly" data-i18n="custom_price">Precio personalizado</div>
                     </div>
                     <ul class="pricing-features">
                         <li><span class="check-icon">✓</span> <span data-i18n="p2_f1">Todo lo del plan Essential.</span>
@@ -415,46 +404,33 @@
                 </div>
             </div>
 
-            <!-- ROI Comparison Table -->
+            <!-- Economic Impact Table -->
             <div class="roi-table-wrap">
-                <h3 class="roi-table-title" data-i18n="roi_title">📊 ¿Cuántas citas necesita recuperar para que se pague
-                    solo?</h3>
+                <h3 class="roi-table-title" data-i18n="roi_title">📊 Impacto económico de la mala preparación</h3>
                 <div class="roi-table-scroll">
                     <table class="roi-table">
                         <thead>
                             <tr>
                                 <th data-i18n="roi_col_test">Prueba médica</th>
-                                <th data-i18n="roi_col_impact">⚠️ Impacto por cancelación (coste desperdiciado + ingreso
-                                    perdido)</th>
-                                <th data-i18n="roi_col_essential">🥉 Essential (69 €/mes) se rentabiliza recuperando…
-                                </th>
-                                <th data-i18n="roi_col_pro">🥈 Pro (149 €/mes) se rentabiliza recuperando…</th>
+                                <th data-i18n="roi_col_impact">⚠️ Pérdida estimada por cada prueba cancelada</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td data-i18n="roi_r1_test">Ecografía</td>
                                 <td class="roi-impact">40 €</td>
-                                <td data-i18n="roi_r1_ess">2 citas / mes</td>
-                                <td data-i18n="roi_r1_pro">4 citas / mes</td>
                             </tr>
                             <tr>
                                 <td data-i18n="roi_r2_test">TC (Scanner)</td>
                                 <td class="roi-impact">100 €</td>
-                                <td data-i18n="roi_r2_ess">1 cita / mes</td>
-                                <td data-i18n="roi_r2_pro">2 citas / mes</td>
                             </tr>
                             <tr>
                                 <td data-i18n="roi_r3_test">Resonancia (RM)</td>
                                 <td class="roi-impact">170 €</td>
-                                <td data-i18n="roi_r3_ess">1 cita / mes</td>
-                                <td data-i18n="roi_r3_pro">1 cita / mes</td>
                             </tr>
                             <tr>
                                 <td data-i18n="roi_r4_test">Endoscopias (Gastro/Colono)</td>
                                 <td class="roi-impact">250 €</td>
-                                <td data-i18n="roi_r4_ess">1 cita / mes</td>
-                                <td data-i18n="roi_r4_pro">1 cita / mes</td>
                             </tr>
                         </tbody>
                     </table>
