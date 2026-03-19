@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ben_4_title: "Personalización y marca (white label)",
             ben_4_a: "<strong>Portal con marca propia:</strong> Integre su logo y colores corporativos, manteniendo la coherencia visual con su ecosistema digital.",
             ben_4_b: "<strong>Control de catálogo:</strong> Muestre solo las pruebas disponibles en su centro y oculte el resto.",
-            copyright: "© 2026 ComoMePreparo™ B2B Solutions. Todos los derechos reservados."
+            copyright: "© 2026 ComoMePreparo™. Todos los derechos reservados."
         },
         en: {
             hero_bubble: "For Clinics and Hospitals",
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ben_4_title: "Personalization and branding (white label)",
             ben_4_a: "<strong>Branded portal:</strong> Integrate your logo and corporate colors, maintaining visual coherence with your digital ecosystem.",
             ben_4_b: "<strong>Catalog control:</strong> Ability to show only the tests available at your center and hide the rest.",
-            copyright: "© 2026 ComoMePreparo™ B2B Solutions. All rights reserved."
+            copyright: "© 2026 ComoMePreparo™. All rights reserved."
         }
     };
 
