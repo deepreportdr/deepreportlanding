@@ -13,8 +13,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
         rel="stylesheet">
-  <script type="module" crossorigin src="/assets/index-fH8ilUto.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-10Dmwuj0.css">
+  <script type="module" crossorigin src="/assets/index-BaE5NolA.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-C8weiw7j.css">
 </head>
 
 <body>
@@ -149,30 +149,30 @@
                             <span class="chat-status"></span> Guía de Preparación IA
                         </div>
                         <div class="chat-body" id="chatList">
-                            <div class="chat-msg ai">
+                            <div class="chat-msg ai chat-hidden">
                                 <div class="msg-avatar">✨</div>
                                 <div class="msg-bubble">¡Hola! Soy tu guía virtual para la preparación. ¿En qué puedo
                                     ayudarte con tus dudas sobre tu próxima prueba?</div>
                             </div>
 
-                            <div class="chat-msg user">
+                            <div class="chat-msg user chat-hidden">
                                 <div class="msg-avatar">👤</div>
                                 <div class="msg-bubble">Me han pedido una resonancia</div>
                             </div>
 
-                            <div class="chat-msg ai">
+                            <div class="chat-msg ai chat-hidden">
                                 <div class="msg-avatar">✨</div>
                                 <div class="msg-bubble">¡Hola! Cuando hablamos de una resonancia, nos referimos a una
                                     prueba de imagen muy detallada, pero hay diferentes tipos según la parte del cuerpo
                                     que se vaya a estudiar...</div>
                             </div>
 
-                            <div class="chat-msg user">
+                            <div class="chat-msg user chat-hidden">
                                 <div class="msg-avatar">👤</div>
                                 <div class="msg-bubble">Una resonancia cardíaca!</div>
                             </div>
 
-                            <div class="chat-msg ai">
+                            <div class="chat-msg ai chat-hidden">
                                 <div class="msg-avatar">✨</div>
                                 <div class="msg-bubble">¡Perfecto! Una <strong>Resonancia Magnética Cardíaca
                                         (RMC)</strong> es una prueba muy avanzada que nos permite ver con gran detalle
@@ -187,9 +187,33 @@
                                         style="color:#2B8496; font-weight:600; text-decoration: underline;">Resonancia
                                         Magnética Cardíaca (RMC)</a></div>
                             </div>
+
+                            <div class="typing-indicator chat-hidden" id="typingIndicator">
+                                <div class="msg-avatar">✨</div>
+                                <div class="msg-bubble typing-bubble">
+                                    <span class="typing-dot"></span>
+                                    <span class="typing-dot"></span>
+                                    <span class="typing-dot"></span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="floating-badge" style="bottom: 20px; right: 20px; z-index: 10;">
-                            <span data-i18n="chat_badge">✨ +16 Idiomas Soportados</span>
+                        <div class="chat-lang-selector">
+                            <button class="chat-lang-btn active" data-chat-lang="es" title="Español">🇪🇸</button>
+                            <button class="chat-lang-btn" data-chat-lang="en" title="English">🇬🇧</button>
+                            <button class="chat-lang-btn" data-chat-lang="fr" title="Français">🇫🇷</button>
+                            <button class="chat-lang-btn" data-chat-lang="de" title="Deutsch">🇩🇪</button>
+                            <button class="chat-lang-btn" data-chat-lang="it" title="Italiano">🇮🇹</button>
+                            <button class="chat-lang-btn" data-chat-lang="pt" title="Português">🇵🇹</button>
+                            <button class="chat-lang-btn" data-chat-lang="uk" title="Українська">🇺🇦</button>
+                            <button class="chat-lang-btn" data-chat-lang="ru" title="Русский">🇷🇺</button>
+                            <button class="chat-lang-btn" data-chat-lang="ar" title="العربية">🇸🇦</button>
+                            <button class="chat-lang-btn" data-chat-lang="zh" title="中文">🇨🇳</button>
+                            <button class="chat-lang-btn" data-chat-lang="ja" title="日本語">🇯🇵</button>
+                            <button class="chat-lang-btn" data-chat-lang="hi" title="हिन्दी">🇮🇳</button>
+                            <button class="chat-lang-btn" data-chat-lang="fa" title="فارسی">🇮🇷</button>
+                            <button class="chat-lang-btn" data-chat-lang="fi" title="Suomi">🇫🇮</button>
+                            <button class="chat-lang-btn" data-chat-lang="tr" title="Türkçe">🇹🇷</button>
+                            <button class="chat-lang-btn" data-chat-lang="pl" title="Polski">🇵🇱</button>
                         </div>
                     </div>
                 </div>
@@ -620,6 +644,7 @@
         </div>
     </footer>
 
+    <script src="./chat-translations.js"></script>
 </body>
 
 </html>

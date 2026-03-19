@@ -953,7 +953,7 @@ textarea:focus {
 .chat-mockup {
     display: flex;
     flex-direction: column;
-    height: 520px;
+    height: 580px;
     background: #F8FAFC;
     color: #334155;
     border-radius: 16px;
@@ -994,6 +994,94 @@ textarea:focus {
     font-size: 0.95rem;
     font-family: var(--font-body);
     scroll-behavior: smooth;
+    flex: 1;
+}
+
+.chat-lang-selector {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    padding: 10px 12px;
+    background: #FFFFFF;
+    border-top: 1px solid #E2E8F0;
+    flex-shrink: 0;
+}
+
+.chat-lang-btn {
+    background: none;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 1.15rem;
+    cursor: pointer;
+    padding: 3px 5px;
+    transition: all 0.2s ease;
+    line-height: 1;
+}
+
+.chat-lang-btn:hover {
+    background: #F1F5F9;
+    transform: scale(1.15);
+}
+
+.chat-lang-btn.active {
+    border-color: #2B8496;
+    background: #E0F2FE;
+}
+
+#chatList[dir="rtl"] .msg-bubble {
+    text-align: right;
+}
+
+/* Chat animation */
+.chat-hidden {
+    display: none !important;
+}
+
+.chat-reveal {
+    display: flex !important;
+    animation: chatFadeIn 0.4s ease forwards;
+}
+
+@keyframes chatFadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Typing indicator */
+.typing-indicator {
+    display: flex;
+    gap: 12px;
+    max-width: 90%;
+}
+
+.typing-bubble {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 12px 18px !important;
+    min-height: auto !important;
+}
+
+.typing-dot {
+    width: 8px;
+    height: 8px;
+    background: #94A3B8;
+    border-radius: 50%;
+    animation: typingBounce 1.4s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typingBounce {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+    30% { transform: translateY(-6px); opacity: 1; }
 }
 
 .chat-body::-webkit-scrollbar {
