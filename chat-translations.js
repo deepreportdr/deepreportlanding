@@ -301,4 +301,19 @@
     } else {
         init();
     }
+
+    // Re-trigger animation on back/forward navigation (bfcache)
+    window.addEventListener('pageshow', function (e) {
+        if (e.persisted) {
+            animationPlayed = false;
+            animationRunning = false;
+            clearAnimationTimeouts();
+            hideTyping();
+            document.querySelectorAll('#chatList .chat-msg').forEach(function (msg) {
+                msg.classList.remove('chat-reveal');
+                msg.classList.add('chat-hidden');
+            });
+            init();
+        }
+    });
 })();
