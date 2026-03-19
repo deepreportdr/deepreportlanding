@@ -258,7 +258,7 @@
         resetAndReplayAnimation();
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
+    function init() {
         // Language buttons
         document.querySelectorAll('.chat-lang-btn').forEach(function (btn) {
             btn.addEventListener('click', function () {
@@ -289,12 +289,16 @@
         // Extra fallback: if after 5s nothing triggered, show messages
         setTimeout(function () {
             if (!animationPlayed) {
-                var rect = chatMockup && chatMockup.getBoundingClientRect();
-                if (rect && rect.top < window.innerHeight) {
-                    animationPlayed = true;
-                    runChatAnimation();
-                }
+                animationPlayed = true;
+                runChatAnimation();
             }
         }, 5000);
-    });
+    }
+
+    // Run init immediately if DOM already ready, otherwise wait
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
 })();
