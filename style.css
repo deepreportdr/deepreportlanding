@@ -153,6 +153,8 @@ a {
     z-index: 100;
     padding: 20px 0;
     transition: padding 0.3s ease, background-color 0.3s ease, backdrop-filter 0.3s ease;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .navbar.scrolled {
@@ -272,6 +274,7 @@ a {
     margin: 0 auto;
     align-items: center;
     min-height: 90vh;
+    min-height: 90dvh;
 }
 
 .bubble {

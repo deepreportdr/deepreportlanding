@@ -276,7 +276,7 @@
                         runChatAnimation();
                     }
                 });
-            }, { threshold: 0.3 });
+            }, { threshold: 0.05, rootMargin: '0px 0px 100px 0px' });
             observer.observe(chatMockup);
         } else {
             // Fallback: show all messages immediately
@@ -285,5 +285,16 @@
                 msg.classList.add('chat-reveal');
             });
         }
+
+        // Extra fallback: if after 5s nothing triggered, show messages
+        setTimeout(function () {
+            if (!animationPlayed) {
+                var rect = chatMockup && chatMockup.getBoundingClientRect();
+                if (rect && rect.top < window.innerHeight) {
+                    animationPlayed = true;
+                    runChatAnimation();
+                }
+            }
+        }, 5000);
     });
 })();
