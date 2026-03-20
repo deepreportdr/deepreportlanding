@@ -1,5 +1,61 @@
 /* CSS Variables and Base setup */
 :root {
+    --bg-dark: #F0F4F8;
+    --bg-card: #FFFFFF;
+    --primary-cyan: #2BBAA0;
+    --primary-glow: rgba(43, 186, 160, 0.3);
+    --accent-gold: #D4A017;
+    --accent-gold-glow: rgba(212, 160, 23, 0.3);
+    --danger-red: #E63946;
+    --text-main: #1A2332;
+    --text-muted: #5A6A7A;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --glass-bg: rgba(255, 255, 255, 0.65);
+    --glass-border: rgba(0, 0, 0, 0.08);
+
+    /* Theme-specific tokens (light defaults) */
+    --nav-scrolled-bg: rgba(240, 244, 248, 0.9);
+    --subtle-bg: rgba(0, 0, 0, 0.04);
+    --subtle-bg-hover: rgba(0, 0, 0, 0.04);
+    --input-bg: rgba(255, 255, 255, 0.7);
+    --footer-bg: rgba(0, 0, 0, 0.03);
+    --shadow-strength: 0.06;
+    --shadow-md: rgba(0, 0, 0, 0.08);
+    --shadow-lg: rgba(0, 0, 0, 0.1);
+    --hero-grad-start: #1A2332;
+    --hero-grad-end: #3A4A5A;
+    --blob1-color: rgba(43, 186, 160, 0.08);
+    --blob2-color: rgba(43, 186, 160, 0.1);
+    --card-hover-bg: rgba(255, 255, 255, 0.85);
+    --badge-bg: rgba(255, 255, 255, 0.95);
+    --pricing-featured-bg: linear-gradient(135deg, rgba(43, 186, 160, 0.06) 0%, rgba(25, 118, 210, 0.04) 100%);
+    --separator: rgba(0, 0, 0, 0.06);
+    --separator-light: rgba(0, 0, 0, 0.05);
+    --faq-grad: rgba(0, 0, 0, 0.02);
+    --pricing-grad: rgba(0, 0, 0, 0.02);
+    --benefits-grad: rgba(43, 186, 160, 0.04);
+    --solution-bg: rgba(255, 255, 255, 0.4);
+    --roi-math-bg: rgba(0, 0, 0, 0.03);
+    --roi-math-border: rgba(0, 0, 0, 0.06);
+    --table-head-bg: rgba(43, 186, 160, 0.08);
+    --table-row-hover: rgba(43, 186, 160, 0.05);
+    --table-cell-border: rgba(0, 0, 0, 0.04);
+    --icon-wrap-bg: rgba(0, 0, 0, 0.04);
+    --feature-icon-bg: rgba(0, 0, 0, 0.03);
+    --benefit-icon-bg: rgba(43, 186, 160, 0.1);
+    --benefit-icon-border: rgba(43, 186, 160, 0.2);
+    --benefit-accent-bg: rgba(212, 160, 23, 0.1);
+    --benefit-accent-border: rgba(212, 160, 23, 0.2);
+    --bubble-bg: rgba(43, 186, 160, 0.1);
+    --bubble-border: rgba(43, 186, 160, 0.25);
+    --mockup-header-bg: rgba(0, 0, 0, 0.04);
+    --mockup-body-bg: rgba(0, 0, 0, 0.02);
+    --lang-selector-bg: rgba(0, 0, 0, 0.05);
+    --logo-filter: invert(62%) sepia(52%) saturate(487%) hue-rotate(118deg) brightness(92%) contrast(88%);
+}
+
+[data-theme="dark"] {
     --bg-dark: #0B132B;
     --bg-card: #1C2541;
     --primary-cyan: #48E5C2;
@@ -9,10 +65,47 @@
     --danger-red: #E63946;
     --text-main: #F8F9FA;
     --text-muted: #ADB5BD;
-    --font-heading: 'Outfit', sans-serif;
-    --font-body: 'Inter', sans-serif;
     --glass-bg: rgba(28, 37, 65, 0.45);
     --glass-border: rgba(255, 255, 255, 0.08);
+
+    --nav-scrolled-bg: rgba(11, 19, 43, 0.85);
+    --subtle-bg: rgba(255, 255, 255, 0.05);
+    --subtle-bg-hover: rgba(255, 255, 255, 0.05);
+    --input-bg: rgba(0, 0, 0, 0.2);
+    --footer-bg: rgba(0, 0, 0, 0.2);
+    --shadow-strength: 0.5;
+    --shadow-md: rgba(0, 0, 0, 0.3);
+    --shadow-lg: rgba(0, 0, 0, 0.4);
+    --hero-grad-start: #FFFFFF;
+    --hero-grad-end: #ADB5BD;
+    --blob1-color: rgba(28, 37, 65, 0.8);
+    --blob2-color: rgba(72, 229, 194, 0.15);
+    --card-hover-bg: rgba(28, 37, 65, 0.6);
+    --badge-bg: rgba(14, 20, 40, 0.95);
+    --pricing-featured-bg: linear-gradient(135deg, rgba(72, 229, 194, 0.05) 0%, rgba(25, 118, 210, 0.05) 100%);
+    --separator: rgba(255, 255, 255, 0.05);
+    --separator-light: rgba(255, 255, 255, 0.05);
+    --faq-grad: rgba(28, 37, 65, 0.3);
+    --pricing-grad: rgba(11, 19, 43, 0.5);
+    --benefits-grad: rgba(72, 229, 194, 0.05);
+    --solution-bg: rgba(28, 37, 65, 0.2);
+    --roi-math-bg: rgba(0, 0, 0, 0.2);
+    --roi-math-border: rgba(255, 255, 255, 0.05);
+    --table-head-bg: rgba(72, 229, 194, 0.08);
+    --table-row-hover: rgba(72, 229, 194, 0.04);
+    --table-cell-border: rgba(255, 255, 255, 0.04);
+    --icon-wrap-bg: rgba(255, 255, 255, 0.05);
+    --feature-icon-bg: rgba(255, 255, 255, 0.05);
+    --benefit-icon-bg: rgba(72, 229, 194, 0.1);
+    --benefit-icon-border: rgba(72, 229, 194, 0.2);
+    --benefit-accent-bg: rgba(249, 200, 14, 0.1);
+    --benefit-accent-border: rgba(249, 200, 14, 0.2);
+    --bubble-bg: rgba(72, 229, 194, 0.1);
+    --bubble-border: rgba(72, 229, 194, 0.2);
+    --mockup-header-bg: rgba(0, 0, 0, 0.2);
+    --mockup-body-bg: rgba(255, 255, 255, 0.05);
+    --lang-selector-bg: rgba(255, 255, 255, 0.1);
+    --logo-filter: invert(86%) sepia(21%) saturate(1084%) hue-rotate(113deg) brightness(97%) contrast(85%);
 }
 
 * {
@@ -57,6 +150,33 @@ a {
     text-align: center;
 }
 
+/* Theme Toggle */
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--glass-border);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+    border-color: var(--primary-cyan);
+    color: var(--primary-cyan);
+    background: var(--subtle-bg);
+}
+
+body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
 /* Glassmorphism Classes */
 .glass-card {
     background: var(--glass-bg);
@@ -64,7 +184,7 @@ a {
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--glass-border);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, var(--shadow-strength));
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -124,7 +244,7 @@ a {
 }
 
 .btn-outline:hover {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: var(--subtle-bg-hover);
     border-color: var(--text-main);
 }
 
@@ -159,7 +279,7 @@ a {
 
 .navbar.scrolled {
     padding: 12px 0;
-    background-color: rgba(11, 19, 43, 0.85);
+    background-color: var(--nav-scrolled-bg);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--glass-border);
 }
@@ -183,7 +303,7 @@ a {
     display: flex;
     align-items: center;
     gap: 8px;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--subtle-bg);
     padding: 4px 12px;
     border-radius: 20px;
     border: 1px solid var(--glass-border);
@@ -232,8 +352,7 @@ a {
     height: 36px;
     width: auto;
     display: block;
-    /* Filter to turn dark logo into primary cyan (#48E5C2) */
-    filter: invert(86%) sepia(21%) saturate(1084%) hue-rotate(113deg) brightness(97%) contrast(85%);
+    filter: var(--logo-filter);
 }
 
 .logo-brand-text {
@@ -280,9 +399,9 @@ a {
 .bubble {
     display: inline-block;
     padding: 6px 16px;
-    background-color: rgba(72, 229, 194, 0.1);
+    background-color: var(--bubble-bg);
     color: var(--primary-cyan);
-    border: 1px solid rgba(72, 229, 194, 0.2);
+    border: 1px solid var(--bubble-border);
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
@@ -292,14 +411,14 @@ a {
 }
 
 .bubble.green {
-    background-color: rgba(72, 229, 194, 0.1);
+    background-color: var(--bubble-bg);
 }
 
 .hero-title {
     font-size: 3.5rem;
     line-height: 1.1;
     margin-bottom: 24px;
-    background: linear-gradient(to right, #FFFFFF, #ADB5BD);
+    background: linear-gradient(to right, var(--hero-grad-start), var(--hero-grad-end));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -333,7 +452,7 @@ a {
     left: -10%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(28, 37, 65, 0.8) 0%, rgba(11, 19, 43, 0) 70%);
+    background: radial-gradient(circle, var(--blob1-color) 0%, transparent 70%);
 }
 
 .blob-2 {
@@ -341,7 +460,7 @@ a {
     right: -20%;
     width: 700px;
     height: 700px;
-    background: radial-gradient(circle, rgba(72, 229, 194, 0.15) 0%, rgba(11, 19, 43, 0) 70%);
+    background: radial-gradient(circle, var(--blob2-color) 0%, transparent 70%);
 }
 
 /* Mockup UI */
@@ -367,7 +486,7 @@ a {
 }
 
 .mockup-header {
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--mockup-header-bg);
     padding: 12px 16px;
     display: flex;
     gap: 8px;
@@ -394,13 +513,13 @@ a {
 
 .mockup-body {
     padding: 32px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent);
+    background: linear-gradient(135deg, var(--mockup-body-bg), transparent);
 }
 
 .lang-selector {
     display: inline-block;
     padding: 6px 12px;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--lang-selector-bg);
     border-radius: 6px;
     font-size: 0.85rem;
     margin-bottom: 24px;
@@ -448,7 +567,7 @@ a {
 .task {
     display: block;
     font-size: 1rem;
-    color: white;
+    color: var(--text-main);
 }
 
 .ai-button {
@@ -498,19 +617,19 @@ section {
 
 .problem-card:hover {
     transform: translateY(-5px);
-    background: rgba(28, 37, 65, 0.6);
+    background: var(--card-hover-bg);
 }
 
 .icon-wrap {
     width: 56px;
     height: 56px;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--icon-wrap-bg);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 24px;
-    color: white;
+    color: var(--text-main);
 }
 
 .icon-wrap.danger {
@@ -547,7 +666,7 @@ section {
 
 /* Solution Section */
 .solution {
-    background-color: rgba(28, 37, 65, 0.2);
+    background-color: var(--solution-bg);
     position: relative;
 }
 
@@ -579,7 +698,7 @@ section {
 
 .feature-icon {
     font-size: 2rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--feature-icon-bg);
     width: 60px;
     height: 60px;
     border-radius: 16px;
@@ -593,7 +712,7 @@ section {
 .feature-content strong {
     display: block;
     font-size: 1.2rem;
-    color: white;
+    color: var(--text-main);
     margin-bottom: 8px;
     font-family: var(--font-heading);
 }
@@ -629,15 +748,15 @@ section {
     position: absolute;
     bottom: 20px;
     right: 20px;
-    background: rgba(14, 20, 40, 0.95);
+    background: var(--badge-bg);
     backdrop-filter: blur(10px);
     border: 1px solid var(--primary-cyan);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px var(--shadow-lg);
     padding: 12px 18px;
     border-radius: 12px;
     font-weight: 500;
     font-size: 0.85rem;
-    color: white;
+    color: var(--text-main);
     max-width: 240px;
     line-height: 1.6;
     text-align: center;
@@ -683,7 +802,7 @@ section {
     font-size: 4.5rem;
     font-weight: 800;
     font-family: var(--font-heading);
-    color: white;
+    color: var(--text-main);
     line-height: 1;
 }
 
@@ -699,16 +818,16 @@ section {
 }
 
 .roi-math {
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--roi-math-bg);
     border-radius: 12px;
     padding: 32px;
     margin-bottom: 40px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--roi-math-border);
 }
 
 .math-highlight {
     font-size: 1.2rem;
-    color: white;
+    color: var(--text-main);
     margin-bottom: 16px;
 }
 
@@ -724,7 +843,7 @@ section {
 
 /* FAQ Accordion */
 .faq {
-    background: linear-gradient(to bottom, transparent, rgba(28, 37, 65, 0.3));
+    background: linear-gradient(to bottom, transparent, var(--faq-grad));
 }
 
 /* ROI Comparison Table */
@@ -759,7 +878,7 @@ section {
 }
 
 .roi-table thead th {
-    background: rgba(72, 229, 194, 0.08);
+    background: var(--table-head-bg);
     color: var(--primary-cyan);
     font-weight: 600;
     padding: 12px 14px;
@@ -780,7 +899,7 @@ section {
 .roi-table tbody td {
     padding: 12px 14px;
     color: var(--text-main);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid var(--table-cell-border);
 }
 
 .roi-table tbody tr:last-child td {
@@ -801,7 +920,7 @@ section {
 }
 
 .roi-table tbody tr:hover {
-    background: rgba(72, 229, 194, 0.04);
+    background: var(--table-row-hover);
 }
 
 .roi-impact {
@@ -847,7 +966,7 @@ section {
 
 .accordion-item.active {
     border-color: var(--primary-cyan);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, var(--shadow-strength));
 }
 
 .accordion-header {
@@ -858,7 +977,7 @@ section {
     align-items: center;
     background: transparent;
     border: none;
-    color: white;
+    color: var(--text-main);
     font-size: 1.1rem;
     font-weight: 600;
     font-family: var(--font-heading);
@@ -881,7 +1000,7 @@ section {
 .accordion-content {
     padding: 0 24px 24px;
     color: var(--text-muted);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid var(--separator-light);
     padding-top: 24px;
 }
 
@@ -905,9 +1024,9 @@ textarea {
     width: 100%;
     padding: 16px;
     border-radius: 8px;
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--input-bg);
     border: 1px solid var(--glass-border);
-    color: white;
+    color: var(--text-main);
     font-family: var(--font-body);
     font-size: 1rem;
     transition: border-color 0.3s;
@@ -928,7 +1047,7 @@ textarea:focus {
 .footer {
     border-top: 1px solid var(--glass-border);
     padding: 40px 0;
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--footer-bg);
 }
 
 .container-footer {
@@ -963,7 +1082,7 @@ textarea:focus {
     overflow: hidden;
     position: relative;
     z-index: 1;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px var(--glass-border);
+    box-shadow: 0 20px 40px var(--shadow-lg), 0 0 0 1px var(--glass-border);
 }
 
 .chat-header {
@@ -1155,7 +1274,7 @@ textarea:focus {
 
 /* Benefits Section */
 .benefits {
-    background: linear-gradient(to bottom, transparent, rgba(72, 229, 194, 0.05), transparent);
+    background: linear-gradient(to bottom, transparent, var(--benefits-grad), transparent);
     position: relative;
 }
 
@@ -1182,33 +1301,33 @@ textarea:focus {
 
 .benefit-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(72, 229, 194, 0.3);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    background: rgba(28, 37, 65, 0.6);
+    border-color: var(--benefit-icon-border);
+    box-shadow: 0 20px 40px var(--shadow-md);
+    background: var(--card-hover-bg);
 }
 
 .benefit-icon-wrap {
     width: 64px;
     height: 64px;
-    background: rgba(72, 229, 194, 0.1);
+    background: var(--benefit-icon-bg);
     color: var(--primary-cyan);
     border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(72, 229, 194, 0.2);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--benefit-icon-border);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, var(--shadow-strength));
 }
 
 .benefit-icon-wrap.accent {
-    background: rgba(249, 200, 14, 0.1);
+    background: var(--benefit-accent-bg);
     color: var(--accent-gold);
-    border-color: rgba(249, 200, 14, 0.2);
+    border-color: var(--benefit-accent-border);
 }
 
 .benefit-card h3 {
     font-size: 1.75rem;
-    color: white;
+    color: var(--text-main);
     font-weight: 700;
 }
 
@@ -1257,7 +1376,7 @@ textarea:focus {
 /* Pricing Section Styles merged and fixed */
 .pricing {
     padding: 120px 0;
-    background: linear-gradient(to bottom, rgba(11, 19, 43, 0.5), transparent);
+    background: linear-gradient(to bottom, var(--pricing-grad), transparent);
     position: relative;
 }
 
@@ -1284,13 +1403,14 @@ textarea:focus {
 
 .pricing-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: var(--glass-border);
+    box-shadow: 0 10px 30px var(--shadow-md);
 }
 
 .pricing-card.featured {
     border-color: var(--primary-cyan);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(72, 229, 194, 0.15);
-    background: linear-gradient(135deg, rgba(72, 229, 194, 0.05) 0%, rgba(25, 118, 210, 0.05) 100%);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, var(--shadow-strength)), 0 0 20px var(--primary-glow);
+    background: var(--pricing-featured-bg);
     transform: translateY(-16px);
 }
 
@@ -1319,12 +1439,12 @@ textarea:focus {
     text-align: center;
     margin-bottom: 32px;
     padding-bottom: 32px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--separator);
 }
 
 .tier-name {
     font-size: 1.5rem;
-    color: white;
+    color: var(--text-main);
     margin-bottom: 8px;
     display: flex;
     align-items: center;
@@ -1357,7 +1477,7 @@ textarea:focus {
 .tier-yearly {
     font-size: 0.85rem;
     color: var(--text-muted);
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--subtle-bg);
     display: inline-block;
     padding: 4px 12px;
     border-radius: 12px;
@@ -1425,7 +1545,7 @@ textarea:focus {
 
     .pricing-card.featured {
         transform: none;
-        box-shadow: 0 4px 20px rgba(72, 229, 194, 0.1);
+        box-shadow: 0 4px 20px var(--primary-glow);
     }
 
     .pricing-card.featured:hover {

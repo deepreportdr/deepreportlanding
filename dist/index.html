@@ -13,8 +13,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
         rel="stylesheet">
-  <script type="module" crossorigin src="/assets/index-BwgHkwod.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-DYBHp0Ox.css">
+    <script>
+        // Prevent flash of wrong theme
+        (function() {
+            var t = localStorage.getItem('preferredTheme');
+            if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+        })();
+    </script>
+  <script type="module" crossorigin src="/assets/index-KB6PFEtw.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Cb3BXemP.css">
 </head>
 
 <body>
@@ -35,6 +42,9 @@
                     <span class="lang-separator">/</span>
                     <button class="lang-btn" data-lang="en">EN</button>
                 </div>
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <span class="theme-icon">☀️</span>
+                </button>
             </div>
         </div>
     </nav>
@@ -638,6 +648,8 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.4/purify.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LesrI0sAAAAALSngIE4S6dDcR1hgvrfRrpM3w9Y"></script>
     <script src="/chat-translations.js"></script>
 </body>
 

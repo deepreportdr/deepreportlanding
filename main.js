@@ -1,6 +1,30 @@
 // main.js
 
 document.addEventListener('DOMContentLoaded', () => {
+    // 0. Theme Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = themeToggle.querySelector('.theme-icon');
+
+    function setTheme(theme) {
+        if (theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeIcon.textContent = '🌙';
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+            themeIcon.textContent = '☀️';
+        }
+        localStorage.setItem('preferredTheme', theme);
+    }
+
+    themeToggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme');
+        setTheme(current === 'dark' ? 'light' : 'dark');
+    });
+
+    // Initialize theme
+    const savedTheme = localStorage.getItem('preferredTheme') || 'light';
+    setTheme(savedTheme);
+
     // 1. Navigation background effect on scroll
     const navbar = document.getElementById('navbar');
 
