@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function setTheme(theme) {
         if (theme === 'dark') {
             document.documentElement.setAttribute('data-theme', 'dark');
-            themeIcon.textContent = '🌙';
+            themeIcon.textContent = '☀️';
         } else {
             document.documentElement.removeAttribute('data-theme');
-            themeIcon.textContent = '☀️';
+            themeIcon.textContent = '🌙';
         }
         localStorage.setItem('preferredTheme', theme);
     }
