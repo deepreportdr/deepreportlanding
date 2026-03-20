@@ -337,9 +337,12 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.disabled = true;
             submitBtn.textContent = currentLang === 'es' ? 'Enviando...' : 'Sending...';
 
-            const formData = new FormData(contactForm);
-
             try {
+                const token = await grecaptcha.execute('6LesrI0sAAAAALSngIE4S6dDcR1hgvrfRrpM3w9Y', { action: 'contact_form' });
+
+                const formData = new FormData(contactForm);
+                formData.append('g-recaptcha-response', token);
+
                 const response = await fetch(contactForm.action, {
                     method: 'POST',
                     body: formData,
