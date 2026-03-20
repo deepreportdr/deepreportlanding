@@ -1,3 +1,8 @@
+/* Hide reCAPTCHA v3 badge (attribution text added inline per Google TOS) */
+.grecaptcha-badge {
+    visibility: hidden !important;
+}
+
 /* CSS Variables and Base setup */
 :root {
     --bg-dark: #F0F4F8;
