@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (translations[lang][key]) {
-                el.innerHTML = translations[lang][key];
+                el.innerHTML = DOMPurify.sanitize(translations[lang][key]);
             }
         });
 
@@ -353,15 +353,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     successMessage.style.display = 'block';
                     successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 } else {
-                    const data = await response.json();
-                    if (data && data.errors) {
-                        alert(data.errors.map(error => error.message).join(", "));
-                    } else {
-                        const errorMsg = currentLang === 'es'
-                            ? 'Ups! Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo.'
-                            : 'Oops! There was a problem submitting the form. Please try again.';
-                        alert(errorMsg);
-                    }
+                    const errorMsg = currentLang === 'es'
+                        ? 'Ups! Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo.'
+                        : 'Oops! There was a problem submitting the form. Please try again.';
+                    alert(errorMsg);
                     submitBtn.disabled = false;
                     submitBtn.textContent = originalBtnText;
                 }

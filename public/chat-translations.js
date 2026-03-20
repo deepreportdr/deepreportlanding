@@ -230,15 +230,15 @@
         // Update header
         var header = document.querySelector('.chat-header');
         if (header) {
-            header.innerHTML = '<span class="chat-status"></span> ' + t.header;
+            header.innerHTML = DOMPurify.sanitize('<span class="chat-status"></span> ' + t.header);
         }
 
         // Update messages
         var bubbles = document.querySelectorAll('#chatList .chat-msg .msg-bubble');
-        if (bubbles[0]) bubbles[0].innerHTML = t.msg2;
-        if (bubbles[1]) bubbles[1].innerHTML = t.msg3;
-        if (bubbles[2]) bubbles[2].innerHTML = t.msg4;
-        if (bubbles[3]) bubbles[3].innerHTML = t.msg5;
+        if (bubbles[0]) bubbles[0].innerHTML = DOMPurify.sanitize(t.msg2);
+        if (bubbles[1]) bubbles[1].innerHTML = DOMPurify.sanitize(t.msg3);
+        if (bubbles[2]) bubbles[2].innerHTML = DOMPurify.sanitize(t.msg4);
+        if (bubbles[3]) bubbles[3].innerHTML = DOMPurify.sanitize(t.msg5);
 
         // Update active button
         document.querySelectorAll('.chat-lang-btn').forEach(function (btn) {
