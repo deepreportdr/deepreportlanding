@@ -235,11 +235,10 @@
 
         // Update messages
         var bubbles = document.querySelectorAll('#chatList .chat-msg .msg-bubble');
-        if (bubbles[0]) bubbles[0].innerHTML = t.msg1;
-        if (bubbles[1]) bubbles[1].innerHTML = t.msg2;
-        if (bubbles[2]) bubbles[2].innerHTML = t.msg3;
-        if (bubbles[3]) bubbles[3].innerHTML = t.msg4;
-        if (bubbles[4]) bubbles[4].innerHTML = t.msg5;
+        if (bubbles[0]) bubbles[0].innerHTML = t.msg2;
+        if (bubbles[1]) bubbles[1].innerHTML = t.msg3;
+        if (bubbles[2]) bubbles[2].innerHTML = t.msg4;
+        if (bubbles[3]) bubbles[3].innerHTML = t.msg5;
 
         // Update active button
         document.querySelectorAll('.chat-lang-btn').forEach(function (btn) {
